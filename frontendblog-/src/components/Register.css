@@ -1,0 +1,84 @@
+/* Register.css */
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f4f6f8;
+}
+
+.register-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.register-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.register-form button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-form button:hover {
+  background-color: #0056b3;
+}
+
+.register-form p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.message {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.message.success {
+  background-color: #e6f9e6;
+  color: #2e7d32;
+  border: 1px solid #2e7d32;
+}
+
+.message.error {
+  background-color: #fbeaea;
+  color: #c62828;
+  border: 1px solid #c62828;
+}

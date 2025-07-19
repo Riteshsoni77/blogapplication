@@ -1,0 +1,151 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f7fb;
+  color: #333;
+}
+
+/* Main container */
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Create button */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+.create-btn {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.create-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Blog List Card Grid */
+.blog-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.blog-list li {
+  background: #fff;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+.blog-list li:hover {
+  transform: translateY(-5px);
+}
+.blog-list h3 {
+  font-size: 1.4rem;
+  color: #2575fc;
+  margin-bottom: 0.75rem;
+}
+.blog-list p {
+  flex-grow: 1;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Action Buttons */
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+.actions .edit-btn {
+  background: #ffb74d;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.actions .edit-btn:hover {
+  background: #ffa726;
+}
+.actions .delete-btn {
+  background: #e57373;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.actions .delete-btn:hover {
+  background: #ef5350;
+}
+
+/* Separator */
+.all-Blogs-line {
+  border: none;
+  border-top: 2px solid #ddd;
+  margin: 2rem 0 1rem;
+  position: relative;
+}
+.all-Blogs-line::after {
+  content: "All Blogs";
+  position: absolute;
+  top: -0.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f4f7fb;
+  padding: 0 0.5rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Form Styling */
+form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+form h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2575fc;
+}
+form input, form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+form button {
+  background: #2575fc;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+form button:hover {
+  background: #1c5bbf;
+}
+

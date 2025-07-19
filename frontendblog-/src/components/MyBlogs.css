@@ -1,0 +1,106 @@
+.myblogs-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f6fa;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.header h2 {
+  color: #2c3e50;
+  font-size: 32px;
+}
+
+.create-button {
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.create-button:hover {
+  background-color: #27ae60;
+}
+
+.blog-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.blog-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #34495e;
+  font-size: 24px;
+}
+
+.blog-card p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.blog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.blog-actions a,
+.blog-actions button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.blog-actions a {
+  background-color: #3498db;
+  color: white;
+}
+
+.blog-actions button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.blog-actions a:hover {
+  background-color: #2980b9;
+}
+
+.blog-actions button:hover {
+  background-color: #c0392b;
+}
+
+.no-blogs {
+  text-align: center;
+  color: #777;
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 40px;
+}
