@@ -1,10 +1,10 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom"; // ✅ import useLocation
 import "./Navbar.css";
- // ✅ Add this line
 
 function Navbar() {
   const navigate = useNavigate();
+  const location = useLocation(); // ✅ get current location
   const token = localStorage.getItem("token");
 
   const handleLogout = () => {
@@ -22,7 +22,10 @@ function Navbar() {
           <>
             <Link to="/">Home</Link>
             <Link to="/myblogs">My Blogs</Link>
-            <Link to="/create">Create</Link>
+            {/* ✅ Show Create button only if not on homepage */}
+            {location.pathname !== "/" && (
+              <Link to="/create">Create</Link>
+            )}
             <button onClick={handleLogout} className="logout-button">
               Logout
             </button>
