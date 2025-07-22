@@ -1,0 +1,54 @@
+DROP DATABASE IF EXISTS blogdb;
+
+-- 🆕 Create the new database
+CREATE DATABASE blogdb;
+USE blogdb;
+
+-- 👤 Create users table
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL
+);
+
+-- 📝 Create blogs table with foreign key to users
+CREATE TABLE blogs (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  content TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  user_id INT NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- ✅ Optional: View the schema
+SHOW TABLES;
+DESCRIBE users;
+DESCRIBE blogs;
+
+-- 📊 View existing data
+SELECT * FROM users;
+SELECT * FROM blogs;
+
+
+
+-- 👤 Insert dummy users
+INSERT INTO users (email, password)
+VALUES
+  ('alice@example.com', '$2a$10$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36TkFvOvT3zzDO4o9H9PEr2'), -- password: alice123
+  ('bob@example.com',   '$2a$10$VvJmKZeqK0gAVAjz6OiMxOjL3RTuMLK2HOzwnbVVkV.yLjPNEcy5i'); -- password: bob456
+
+-- 📝 Insert dummy blogs
+INSERT INTO blogs (title, content, user_id)
+VALUES
+  ('Alice First Blog', 'This is Alice\'s first blog post.', 1),
+  ('Bob First Blog',   'Bob writes about Node.js and SQL.', 2),
+  ('Alice Second Blog','Another day, another post from Alice.', 1);
+
+-- ✅ View inserted data
+SELECT * FROM users;
+SELECT * FROM blogs;
+ALTER TABLE users ADD COLUMN otp VARCHAR(10);
+
+
+
